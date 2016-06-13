@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-init="myName = 'Rogen'">
+   	 <div ng-hide = "isEditMode">
+   		 <label>{{myName}}</label>
+		<input type="button" value="Edit" ng-click="isEditMode = true">
+    </div>
+        <div ng-hide = "!isEditMode">
+
+      <input type="text" ng-model="myName">
+		<input type="button" value="Save" ng-click="isEditMode = false">
+
+    </div>
+  </body>
+</html>
