@@ -8,23 +8,23 @@
   </style>
 </head>
 <body>
-    <h1 ng-controller = 'headerController'>TODO App({{todos.length}})</h1>
+  <h1 ng-controller = 'headerController'>TODO App({{todos.length}})</h1>
 
   <div ng-controller = "todoAppController">
     <input type="text" placeholder="Enter a TODO item" ng-model="todoText" ng-keypress="addTodo($event)">
 
     <div ng-repeat ='todo in todos'>
       <div  ng-hide ="todo.EditItem">
-        <input type="checkbox" ng-model="todo.isCompleted">
+        <input type="checkbox" ng-model="todo.isCompleted" ng-click='saveTODO(todo)'>
         <label ng-class = "{strike:todo.isCompleted}">{{todo.text}}</label>
         <input type="button" value="Edit" ng-click="editTODO(todo)" ng-disabled = "todo.isCompleted">
-        <input type="button" value="Delete" ng-click="deleteTodo($index)">
+        <input type="button" value="Delete" ng-click="deleteTodo($index,todo)">
       </div>
       <div ng-hide ="!todo.EditItem"> 
        <input type="text" ng-model="todo.text">
        <input type="button" value="Save" ng-click="saveTODO(todo)">
-              <input type="button" value="Cancel" ng-click="cancelTodoEdit(todo)">
-
+       <input type="button" value="Cancel" ng-click="cancelTodoEdit(todo)">
++
      </div>
    </div>
  </div>
