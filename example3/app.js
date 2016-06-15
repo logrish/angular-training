@@ -14,6 +14,10 @@ angular.module('NGBSApp',['ngRoute'])
     .when('/movies',{
     	templateUrl: 'Templates/movies.html',
     	controller: 'moviesCtrl'
+    })   
+     .when('/movie/:movieId',{
+      templateUrl: 'Templates/movie.html',
+      controller: 'movieCtrl'
     })
     .otherwise({
     	redirectTo: '/home'
@@ -40,6 +44,19 @@ angular.module('NGBSApp',['ngRoute'])
 	.catch(function(error){
 		console.log(error);
 	})
+
+
+})
+
+.controller('movieCtrl',function($scope, moviesFactory,$routeParams){
+  moviesFactory
+  .get()
+  .then(function(response){
+        $scope.currentMovie=response.data[$routeParams.movieId];
+  })
+  .catch(function(error){
+    console.log(error);
+  })
 
 
 })

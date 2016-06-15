@@ -1,3 +1,20 @@
-<div ng-repeat="movie in movies">
-       {{movie.name}}
+<br>
+<input type="text" ng-model ="searchText" class="form-control" placeholder="Filter Movie">
+
+
+<div ng-repeat="movie in movies |filter :{'name': searchText} | orderBy:'name'">
+	<div class="col-md-4">
+
+		<h2>       {{movie.name | uppercase }}</h2>
+		<p>
+			<img ng-src="{{movie.thumb}}" class="thumb-big">
+		</p>
+		<p>
+			{{movie.review | limitTo:99}}	
+			<label ng-if="movie.review.length > 99">...</label>
+		</p>
+		<p>
+			<a href="#/movie/{{movie.id}}" class="btn btn-primary">Review</a>
+		</p>
+	</div>
 </div>
