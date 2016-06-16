@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <style type="text/css">
+    .col {
+        border: 1px solid red;
+    }
+    </style>
+</head>
+
+<body ng-app="starter">
+    <ion-pane>
+        <ion-header-bar class="bar-positive">
+            <button class="button button-icon icon ion-navicon"></button>
+            <h1 class="title">The App header</h1>
+            <button class="button button-clear button-positive button-outline">Edit</button>
+        </ion-header-bar>
+        <ion-header-bar class="bar-calm bar-subheader">
+            <h1 class="title">The App Sub Header</h1>
+        </ion-header-bar>
+        <ion-content class="has-subheader">
+            <div class="button-bar bar-royal button-full">
+                <a class="button ">First</a>
+                <a class="button">Second</a>
+                <a class="button">Third</a>
+            </div>
+            <div class="row">
+                <div class="col col-50">.col.col-50</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+            </div>
+            <div class="row">
+                <div class="col col-10">.col</div>
+                <div class="col col-33 col-offset-33">.col</div>
+                <div class="col">.col</div>
+            </div>
+            <div class="row">
+                <div class="col col-top">.col</div>
+                <div class="col col-center">.col</div>
+                <div class="col col-bottom">.col</div>
+                <div class="col">1
+                    <br>2
+                    <br>3
+                    <br>4</div>
+            </div>
+            <div class="row row-top">
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">1
+                    <br>2
+                    <br>3
+                    <br>4</div>
+            </div>
+            <div class="row responsive-sm">
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+            </div>
+            <ul class="list item-divider">
+                <li class="item">1 </li>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-email"></i> Check mail
+                </a>
+                <li class="item">2 </li>
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i class="icon ion-chatbubble-working"></i> Call Ma
+                    <i class="icon ion-ios-telephone-outline"></i>
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-mic-a"></i> Record album
+                    <span class="item-note"> Grammy </span>
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-person-stalker"></i> Friends
+                    <span class="badge badge-assertive">0</span>
+                </a>
+            </ul>
+        </ion-content>
+        <div class="bar bar-footer bar-positive">
+            <button class="button button-clear">Left</button>
+            <div class="title">Footer</div>
+            <button class="button button-clear">Right</button>
+        </div>
+    </ion-pane>
+</body>
+
+</html>
