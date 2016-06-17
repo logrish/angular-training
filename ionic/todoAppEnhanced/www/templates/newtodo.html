@@ -1,0 +1,29 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title" ng-if="!editingTodoId">Add New TODO</h1>
+        <h1 class="title" ng-if="editingTodoId">Edit TODO</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">What would you like to do?? </span>
+                <input type="text" placeholder="Enter Todo text" ng-model="data.todoText">
+            </label>
+            <div class="item row">
+                <div class="col">
+                    <button class="button button-dark button-full" ng-click="closeModal()">
+                        Cancel
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-positive button-full" ng-click="createTodo()" ng-if="!editingTodoId">
+                        Create
+                    </button>
+                    <button class="button button-positive button-full" ng-click="saveTodo()" ng-if="editingTodoId">
+                        Update
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

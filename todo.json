@@ -1,28 +1,22 @@
 {
   "todos": [
     {
-      "id": 545,
-      "text": "Eggs",
-      "isCompleted": false,
-      "EditItem": false
-    },
-    {
-      "id": 26357,
-      "text": "Milk",
-      "isCompleted": false,
-      "EditItem": false
-    },
-    {
       "id": 34040,
-      "text": "Breaad",
-      "isCompleted": false,
-      "EditItem": false
+      "text": "Bread"
     },
     {
       "id": 29916,
       "text": "Butter",
       "isCompleted": false,
       "EditItem": false
+    },
+    {
+      "id": 745748041,
+      "text": "eggs"
+    },
+    {
+      "id": 1704036833,
+      "text": "Bottles"
     }
   ]
 }
